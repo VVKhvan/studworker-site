@@ -1,59 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Студworker — помощь студентам</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Студworker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Manrope', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f8fb;
+            color: #1f1f1f;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: linear-gradient(90deg, #0047AB, #2E8B57);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            font-size: 48px;
+            margin: 0 0 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+        header p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-out;
+        }
+        .button {
+            background-color: #ffffff;
+            color: #0047AB;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            animation: fadeInUp 1.2s ease-out;
+        }
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+        section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideUp 1s ease forwards;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0047AB;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            flex: 1 1 250px;
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        footer {
+            background-color: #1b1b1b;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .vk-link {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .vk-link:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
-  <section class="hero">
-    <h1>Студworker — поддержка для работающих студентов</h1>
-    <p>Узнай, как совмещать учёбу и работу, избегать ошибок при трудоустройстве и защищать свои права. Только полезная информация — от студентов, для студентов.</p>
-    <a href="#about" class="button">Узнать больше</a>
-  </section>
 
-  <section id="about">
+<header>
+    <h1>Студworker</h1>
+    <p>Помогаем студентам уверенно начинать карьеру</p>
+    <a class="button" href="https://vk.com/im?entrypoint=community_page&media=&sel=-229895235" target="_blank">Написать нам</a>
+</header>
+
+<section>
+    <h2>О миссии</h2>
+    <p>
+        Наша цель — помочь студентам правильно выстроить свой карьерный путь, ориентируя их на официальное трудоустройство и соблюдение трудовых прав.
+        Студент сегодня - строитель будущего нашей страны завтра. Важно сохранять, оберегать и развивать молодые таланты, — в этом наша миссия!
+    </p>
+</section>
+
+<section>
+    <h2>Твои возможности</h2>
+    <p>Столкнулся с нарушением своих трудовых прав? Мы на твоей стороне!</p>
+    <ul>
+        <li><strong>45 минут</strong> — Консультация юриста</li>
+        <li><strong>45 минут</strong> — Составление официального письма работодателю</li>
+        <li><strong>60 минут</strong> — Проверка потенциального работодателя</li>
+        <li><strong>60 минут</strong> — Проверка компании и отчет об отзывах сотрудников</li>
+    </ul>
+</section>
+
+<section>
     <h2>О проекте</h2>
-    <p>Студworker создан, чтобы упростить жизнь студентов, которые совмещают учёбу и работу. Мы делимся лайфхаками, юридическими тонкостями, кейсами и проверенными советами — от резюме до трудового договора.</p>
-  </section>
+    <p>“Студworker” — это социальный проект, направленный на помощь студентам в безопасном карьерном старте. Мы предоставляем рекомендации от юристов, советы для правильного начала профессионального пути, рассказываем, как избежать мошенничества, неофициального трудоустройства и недобросовестных работодателей.</p>
+</section>
 
-  <section>
-    <h2>Что вы найдёте на сайте</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Как устроиться на работу</h3>
-        <p>Пошаговые инструкции, примеры резюме, советы по прохождению собеседований.</p>
-      </div>
-      <div class="card">
-        <h3>Права студента-работника</h3>
-        <p>Что должен знать каждый: больничные, график, отпуск, увольнение — простым языком.</p>
-      </div>
-      <div class="card">
-        <h3>Истории студентов</h3>
-        <p>Реальные кейсы, ошибки и победы от тех, кто уже прошёл этот путь.</p>
-      </div>
+<section>
+    <h2>Полезные материалы</h2>
+    <p>Ответами на многие вопросы мы уже поделились в своем блоге.</p>
+    <h3>Переходи и готовься к безопасному старту!</h3>
+    <div class="card-container">
+        <a href="https://vk.com/wall-229895235_250" class="card" target="_blank">
+            <h4>Как устроиться на работу без рекомендаций?</h4>
+        </a>
+        <a href="https://vk.com/wall-229895235_242" class="card" target="_blank">
+            <h4>Первая работа: как влиться в коллектив без стресса?</h4>
+        </a>
+        <a href="https://vk.com/wall-229895235_238" class="card" target="_blank">
+            <h4>Профессии, которые быстро принесут первый доход</h4>
+        </a>
     </div>
-  </section>
+</section>
 
-  <section id="contact">
-    <h2>Связаться с нами</h2>
-    <div class="form">
-      <input type="text" placeholder="Ваше имя" />
-      <input type="email" placeholder="Ваш email" />
-      <textarea rows="5" placeholder="Ваше сообщение"></textarea>
-      <button>Отправить</button>
-    </div>
-  </section>
+<footer>
+    <p>Мы в ВКонтакте — <a class="vk-link" href="https://vk.com/stydworker?from=groups" target="_blank">vk.com/stydworker</a></p>
+</footer>
 
-  <section class="footer">
-    <p>© Студworker, 2025</p>
-    <p>Контакты: <a href="mailto:info@studworker.ru" style="color: #fff; text-decoration: underline;">info@studworker.ru</a></p>
-    <div class="socials">
-      <a href="https://t.me/studworker" target="_blank">📱 Telegram</a>
-      <a href="https://vk.com/studworker" target="_blank">VK</a>
-      <a href="https://instagram.com/studworker" target="_blank">Instagram</a>
-    </div>
-  </section>
 </body>
 </html>
